@@ -39,6 +39,37 @@ client.on('messageCreate', async (message) => {
   }
 });
 
+
+
+client.on("messageCreate", (message) => {
+  const content = message.content.toLowerCase();
+
+  if (rasis.includes(content)) {
+    message.reply("Rasis parah menn")
+  }
+
+  if (names.includes(content)) {
+    message.reply("Wazzup");
+  };
+
+  if (toxic.includes(content)) {
+    message.reply("Toxic parah euyy");
+  };
+
+  if (kasar.includes(content)) {
+    message.reply("Jangan toxic atuh euyy");
+  };
+
+  if (harom.includes(content)) {
+    message.reply("Jangan kasar atuhhh euyy")
+  };
+  
+});
+
+client.login(
+  "Discord Token Anda"
+);
+
 let rasis = [
   "N",
   "n",
@@ -235,32 +266,3 @@ let harom = [
   "Agung ajg",
   "agung Ajg",
 ];
-
-client.on("messageCreate", (message) => {
-  const content = message.content.toLowerCase();
-
-  if (rasis.includes(content)) {
-    message.reply("Rasis parah menn")
-  }
-
-  if (names.includes(content)) {
-    message.reply("Wazzup");
-  };
-
-  if (toxic.includes(content)) {
-    message.reply("Toxic parah euyy");
-  };
-
-  if (kasar.includes(content)) {
-    message.reply("Jangan toxic atuh euyy");
-  };
-
-  if (harom.includes(content)) {
-    message.reply("Jangan kasar atuhhh euyy")
-  };
-  
-});
-
-client.login(
-  "Discord Token Anda"
-);
